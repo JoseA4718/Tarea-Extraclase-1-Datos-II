@@ -7,6 +7,19 @@
 
 
 class Node {
+public:
+    Node(int value);
+
+    int value;
+    Node *next;
+
+    int getValue() const;
+
+    void setValue(int value);
+
+    Node *getNext() const;
+
+    void setNext(Node *next);
 
 };
 
