@@ -1,0 +1,14 @@
+//
+// Created by josea4718 on 3/2/21.
+//
+
+#ifndef TAREA_EXTRACLASE_1_DATOS_II_SINGLYLIST_H
+#define TAREA_EXTRACLASE_1_DATOS_II_SINGLYLIST_H
+
+
+class SinglyList {
+
+};
+
+
+#endif //TAREA_EXTRACLASE_1_DATOS_II_SINGLYLIST_H
