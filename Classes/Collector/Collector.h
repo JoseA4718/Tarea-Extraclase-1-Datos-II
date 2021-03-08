@@ -4,10 +4,28 @@
 
 #ifndef TAREA_EXTRACLASE_1_DATOS_II_COLLECTOR_H
 #define TAREA_EXTRACLASE_1_DATOS_II_COLLECTOR_H
-
+#include "../Singly List/SinglyList.h"
+#include "../Node/Node.h"
 
 class Collector {
-
+private:
+    Node* first;
+    Collector();
+    static Collector* collector_singleton;
+public:
+    ~Collector();
+    void clean();
+    void* new_node();
+    void recicle_node(Node* node);
+    void set_first(Node *node);
+    Node* get_first();
+    void show();
+    static Collector *getInstance(){
+        if (collector_singleton == NULL){
+            collector_singleton = new Collector();
+        }
+        return collector_singleton;
+    };
 };
 
 
