@@ -4,26 +4,26 @@
 
 #include "Node.h"
 #include "iostream"
+#include "../Collector/Collector.h"
 
 using namespace std;
 
-int Node::getValue() const {
-    return value;
+Node::Node() {}
+
+/**
+void* Node::operator new(size_t size) {
+    void*
+}
+*/
+void Node::set_next(Node *node) {
+    this->next = node;
 }
 
-void Node::setValue(int value) {
-    Node::value = value;
+void Node::set_data(int data) {
+    this->data = data;
 }
 
-Node *Node::getNext() const {
-    return next;
+Node* Node::get_next() {
+    return this->next;
 }
 
-void Node::setNext(Node *next) {
-    Node::next = next;
-}
-
-Node::Node(int value) {
-    this->value = value;
-    this->next = NULL;
-}

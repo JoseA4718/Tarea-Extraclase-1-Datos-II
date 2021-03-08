@@ -4,23 +4,23 @@
 
 #ifndef TAREA_EXTRACLASE_1_DATOS_II_NODE_H
 #define TAREA_EXTRACLASE_1_DATOS_II_NODE_H
+#include <iostream>
+#include <stdlib.h>
 
 
 class Node {
 public:
-    Node(int value);
+    void* operator new (size_t size);
+    void operator delete(void *memory_pointer);
+    Node();
+    void set_next(Node *a);
+    void set_data(int data);
+    Node* get_next();
+    int get_data();
 
-    int value;
+private:
     Node *next;
-
-    int getValue() const;
-
-    void setValue(int value);
-
-    Node *getNext() const;
-
-    void setNext(Node *next);
-
+    int data;
 };
 
 

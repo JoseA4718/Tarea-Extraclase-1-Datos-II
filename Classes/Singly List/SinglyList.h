@@ -5,9 +5,18 @@
 #ifndef TAREA_EXTRACLASE_1_DATOS_II_SINGLYLIST_H
 #define TAREA_EXTRACLASE_1_DATOS_II_SINGLYLIST_H
 
+#include "../Node/Node.h"
+
 
 class SinglyList {
-
+public:
+    SinglyList();
+    ~SinglyList();
+    void add(int data);
+    void delete_last();
+    void show();
+private:
+    Node* first;
 };
 
 
