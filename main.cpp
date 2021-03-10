@@ -4,6 +4,11 @@
 
 using namespace std;
 
+/**>
+ * @brief Creates a new instance of a singly list and calls for adding and deleting methods.
+ * @return returns 0 to terminate the main function.
+ * @author Jose Antonio Espinoza
+ */
 int main() {
 
     SinglyList List;

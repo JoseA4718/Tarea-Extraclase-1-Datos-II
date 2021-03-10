@@ -17,18 +17,18 @@ void* Node::operator new(size_t size) {
 
     if (memory_space == nullptr){
         Node* list_node = :: new Node();
-        cout << "\nNode created on a new memory address: " << &list_node << endl;
+        cout << "\nNode created on a new memory address: " << static_cast<void*>(list_node) << endl;
         return list_node;
     }
     else{
-        cout << "\nNode created on a recycled memory address: " << &memory_space << endl;
+        cout << "\nNode created on a recycled memory address: " << static_cast<void*>(memory_space) << endl;
         return memory_space;
     }
 }
 
-void Node::operator delete(void *a) {
-    Collector::getInstance()->recycle_node((Node*)a);
-    cout << "\nNode " << static_cast<void*>(a) << " was deleted from the list and added to garbage Collector\n" << endl;
+void Node::operator delete(void *deleting_node) {
+    Collector::getInstance()->recycle_node((Node*)deleting_node);
+    cout << "\nNode in address: " << static_cast<void*>(deleting_node) << " was deleted from the list and added to garbage Collector\n" << endl;
 }
 
 void Node::set_next(Node *node) {
