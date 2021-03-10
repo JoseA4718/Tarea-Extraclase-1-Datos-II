@@ -11,7 +11,6 @@
 class SinglyList {
 public:
     SinglyList();
-    ~SinglyList();
     void add(int data);
     void delete_last();
     void show();

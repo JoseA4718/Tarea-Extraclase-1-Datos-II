@@ -5,20 +5,16 @@
 using namespace std;
 
 int main() {
-    SinglyList *list = new SinglyList();
 
-    list->append(5);
-    list->append(6);
-    list->append(4);
-    list->append(2);
-    list->append(7);
-
-    list->show();
-
-    list->DeleteFirst();
-
-    list->show();
-
+    SinglyList List;
+    List.add(2);
+    List.delete_last();
+    List.add(6);
+    List.add(7);
+    List.delete_last();
+    List.delete_last();
+    List.add(7);
+    List.add(9);
     return 0;
 }
 

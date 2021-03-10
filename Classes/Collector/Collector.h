@@ -9,19 +9,17 @@
 
 class Collector {
 private:
-    Node* first;
+    Node* first{};
     Collector();
     static Collector* collector_singleton;
 public:
-    ~Collector();
-    void clean();
-    void* new_node();
-    void recicle_node(Node* node);
+    void* NewNode();
+    void recycle_node(Node* node);
     void set_first(Node *node);
     Node* get_first();
     void show();
     static Collector *getInstance(){
-        if (collector_singleton == NULL){
+        if (collector_singleton == nullptr){
             collector_singleton = new Collector();
         }
         return collector_singleton;

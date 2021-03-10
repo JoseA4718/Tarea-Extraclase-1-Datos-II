@@ -6,16 +6,15 @@
 
 using namespace std;
 
-Collector* Collector::collector_singleton = NULL;
+Collector* Collector::collector_singleton = nullptr;
 Collector::Collector() {}
-Collector::~Collector() {}
 
 void Collector::show() {
     Node *tmp = first;
     if (this->first == nullptr){
         cout << "\nCollector has no available memory spaces\n" << endl;
     }else{
-        cout << "\nMemory spaces available in collector: \n" << endl;
+        cout << "\nMemory spaces available in collector:" << endl;
         while (tmp != nullptr){
             cout << static_cast<void*>(tmp) << "\n";
             tmp =tmp -> get_next();
@@ -23,7 +22,7 @@ void Collector::show() {
     }
 }
 
-void* Collector::new_node() {
+void* Collector::NewNode() {
     if (this->first != nullptr){
         Node* tmp = this->first;
         this->set_first(first->get_next());
@@ -34,7 +33,7 @@ void* Collector::new_node() {
     }
 }
 
-void Collector::recicle_node(Node *node) {
+void Collector::recycle_node(Node *node) {
     node->set_next(this->get_first());
     this->set_first(node);
 }

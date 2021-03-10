@@ -11,14 +11,13 @@ using namespace std;
 SinglyList::SinglyList(){
     first = nullptr;
 }
-SinglyList::~SinglyList(){}
 
 void SinglyList::add(int data){
     size_t size = 2;
     Node *new_node = new Node();
     new_node->set_data(data);
     if (first == nullptr){
-        first == new_node;
+        first = new_node;
     }
     else{
         new_node -> set_next(first);
@@ -29,15 +28,15 @@ void SinglyList::add(int data){
 
 void SinglyList::show() {
     Node *tmp = first;
-    if (this -> first == nullptr){
+    if (this->first == nullptr){
         cout<<"\n------------------------\nThe list is currently empty\n------------------------"<< endl;
     }else{
         cout<<"\nCurrent list status:\n------------------------"<<endl;
         while (tmp != nullptr){
-            cout << "[" << tmp->get_data() << ": " << static_cast<void*>(tmp) << "]" << " -> " << "\n";
+            cout << "[" << "DATA: " << tmp->get_data() << " ADDRESS: " << static_cast<void*>(tmp) << "]" << " -> ";
             tmp = tmp->get_next();
         }
-        cout << "------------------------";
+        cout<< "null" << "\n----------------------";
     }
 }
 
