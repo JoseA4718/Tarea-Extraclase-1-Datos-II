@@ -12,14 +12,15 @@ using namespace std;
 int main() {
 
     SinglyList List;
+    List.add(1);
+    List.delete_last();
     List.add(2);
+    List.add(3);
+    List.add(4);
     List.delete_last();
+    List.delete_last();
+    List.add(5);
     List.add(6);
-    List.add(7);
-    List.delete_last();
-    List.delete_last();
-    List.add(7);
-    List.add(9);
     return 0;
 }
 

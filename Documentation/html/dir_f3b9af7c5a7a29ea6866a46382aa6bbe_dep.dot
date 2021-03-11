@@ -1,0 +1,15 @@
+digraph "/home/josea4718/Desktop/Datos II/Tarea Extraclase I/Tarea-Extraclase-1-Datos-II/Classes/Collector" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0c68614ac8d8401edbf4146ded722294 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Classes" fontname="Helvetica", fontsize="10", URL="dir_0c68614ac8d8401edbf4146ded722294.html"]
+  dir_f3b9af7c5a7a29ea6866a46382aa6bbe [shape=box, label="Collector", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f3b9af7c5a7a29ea6866a46382aa6bbe.html"];
+  }
+  dir_5981dd46fc3885bf99d9ff7f4175b643 [shape=box label="Singly List" URL="dir_5981dd46fc3885bf99d9ff7f4175b643.html"];
+  dir_faaa96c821bb5fbec036762df51628dc [shape=box label="Node" URL="dir_faaa96c821bb5fbec036762df51628dc.html"];
+  dir_5981dd46fc3885bf99d9ff7f4175b643->dir_faaa96c821bb5fbec036762df51628dc [headlabel="2", labeldistance=1.5 headhref="dir_000003_000002.html"];
+  dir_f3b9af7c5a7a29ea6866a46382aa6bbe->dir_5981dd46fc3885bf99d9ff7f4175b643 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000003.html"];
+  dir_f3b9af7c5a7a29ea6866a46382aa6bbe->dir_faaa96c821bb5fbec036762df51628dc [headlabel="1", labeldistance=1.5 headhref="dir_000001_000002.html"];
+  dir_faaa96c821bb5fbec036762df51628dc->dir_f3b9af7c5a7a29ea6866a46382aa6bbe [headlabel="1", labeldistance=1.5 headhref="dir_000002_000001.html"];
+}
