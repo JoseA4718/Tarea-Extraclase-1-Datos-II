@@ -1,5 +1,5 @@
 //
-// Created by josea4718 on 3/2/21.
+// Created by josea4718 on 3/7/21.
 //
 
 #include "Collector.h"
@@ -9,6 +9,9 @@ using namespace std;
  * Creates a singleton instance for the Collector
  */
 Collector* Collector::collector_singleton = nullptr;
+/**>
+ * @author Jose Antonio Espinoza Chaves
+ */
 Collector::Collector() {}
 
 /**>
